@@ -1,0 +1,32 @@
+.heading{
+    margin: 5px;
+    color: red;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.searchBar{
+    margin-left: 80.8%;
+    /* float: right; */
+    /* margin: 5px 72%; */
+    /* width: 20%; */
+}
+.noDataPage{
+    text-align: center;
+}
+.databorder{
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid gray;
+}
+.thborder{
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid gray;  
+}
+.pagibtn{
+    margin: 10px;
+   justify-content: center;
+   align-items: center;
+   display: flex;
+}
