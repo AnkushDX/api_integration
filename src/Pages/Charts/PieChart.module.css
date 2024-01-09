@@ -1,0 +1,18 @@
+.h1{
+    color: red;
+}
+.box{
+    border: 1px solid red;
+    margin-top: 30px;
+    width: 700px;
+    height: 500px;
+    text-align: center;
+}
+.piechart{
+    margin-top: 50px;
+    width: 700px;
+    height: 350px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}

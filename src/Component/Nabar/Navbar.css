@@ -1,0 +1,17 @@
+.navbar-brand{
+    font-weight: bold;
+    font-size: 36px;
+    margin-left: 130px;
+}
+.navbar-nav{
+margin-left: 80px;
+font-weight: bold;
+font-size: 20px;
+justify-content: space-between;
+}
+.nav-item{
+    margin-left: 80px;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}

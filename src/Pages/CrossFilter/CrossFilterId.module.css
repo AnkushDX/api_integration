@@ -1,0 +1,46 @@
+.heading{
+    margin: 5px;
+    color: rgb(0, 174, 255);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.head{
+    color: rgb(0, 174, 255);
+}
+.searchBar{
+    margin: 20px;
+    margin-left: 65%;
+}
+
+.sTitle{
+    margin-left: 25px;
+    border: 2px solid rgb(0, 174, 255);
+    outline: none;
+}
+.table{
+    border: 2px solid rgb(0, 174, 255); 
+}
+.noDataPage{
+    text-align: center;
+    font-size: 40px;
+    color: red;
+}
+.databorder{
+    margin: 5px;
+    padding: 5px;
+    border: 2px solid rgb(0, 174, 255);
+}
+.thborder{
+    margin: 5px;
+    padding: 5px;
+    border: 2px solid rgb(0, 174, 255);
+    color: rgb(0, 0, 0);
+}
+.pagibtn{
+    margin: 10px;
+   justify-content: center;
+   align-items: center;
+   display: flex;
+}
+

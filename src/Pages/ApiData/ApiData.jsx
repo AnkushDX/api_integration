@@ -8,9 +8,6 @@ export default function ApiData() {
   const [searchInput, setsearchInput] = useState('');
   const [noData, setNoData]= useState(false)
 
-
-  
- 
   useEffect(() => {
     axios
       .get("https://jsonplaceholder.typicode.com/posts")
@@ -44,76 +41,78 @@ export default function ApiData() {
   setcurrentPage(1)
   };
 //.....................onclickButton..........
-const handlSearch =(e)=>{
-  const searchTerm =e.target.value.toLowerCase()
-  setsearchInput(searchTerm);
-  console.log(searchTerm)
-}
+// const handlSearch =(e)=>{
+//   const searchTerm =e.target.value.toLowerCase()
+//   setsearchInput(searchTerm);
+//   console.log(searchTerm)
+// }
 
-const handleClick=()=>{
-  const searchTerm = searchInput.toLowerCase();
-if(searchTerm ===''){
-  axios.get("https://jsonplaceholder.typicode.com/posts")
-      .then((res)=>setmyData(res.data));
-      setNoData(false);
+// const handleClick=()=>{
+//   const searchTerm = searchInput.toLowerCase();
+// if(searchTerm ===''){
+//   axios.get("https://jsonplaceholder.typicode.com/posts")
+//       .then((res)=>setmyData(res.data));
+//       setNoData(false);
+//       searchInput("")
+
    
-}else{
-   const filterResult= myData.filter((post)=>
-    post.id.toString().includes(searchTerm)||
-    post.title.toLowerCase().includes(searchTerm)
-  )
-  if(filterResult.length === 0){
-    setNoData(true);
-  }else{
-    setNoData(false);
-    setmyData(filterResult)
-    setPerpage(1)
-  }
-}
-}
+// }else{
+//    const filterResult= myData.filter((post)=>
+//     post.id.toString().includes(searchTerm)||
+//     post.title.toLowerCase().includes(searchTerm)
+//   )
+//   if(filterResult.length === 0){
+//     setNoData(true);
+//   }else{
+//     setNoData(false);
+//     setmyData(filterResult)
+//     setPerpage(1)
+//   }
+// }
+// }
 
 
 // ............onChange.............
 
-  //    const handleSearch = (e) => {
-  //   const searchTerm = e.target.value.toLowerCase();
-  //   setsearchInput(searchTerm);
+     const handleSearch = (e) => {
+    const searchTerm = e.target.value.toLowerCase();
+    setsearchInput(searchTerm);
 
-  //   if (searchTerm ===''){
-  //     axios
-  //     .get("https://jsonplaceholder.typicode.com/posts")
-  //     .then((res) => setmyData(res.data));
-  //     setNoData(false)
+    if (searchTerm ===''){
+      axios
+      .get("https://jsonplaceholder.typicode.com/posts")
+      .then((res) => setmyData(res.data));
+      setNoData(false)
       
-  //   }else{
-  //     const filterResult = myData.filter((post) =>
-  //     post.id.toString().includes(searchTerm) ||
-  //     post.title.toLowerCase().includes(searchTerm)
-  // );
-  //    if(filterResult.length === 0){
-  //     setNoData(true)
-  //    }else{
-  //     setNoData(false)
-  //     setmyData(filterResult);
-  //    }   
-  //   }
-  // };
+    }else{
+      const filterResult = myData.filter((post) =>
+      post.id.toString().includes(searchTerm) ||
+      post.title.toLowerCase().includes(searchTerm)
+  );
+     if(filterResult.length === 0){
+      setNoData(true)
+     }else{
+      setNoData(false)
+      setmyData(filterResult);
+     }   
+    }
+  };
 
-  
+
   return (
     <>
       <div className={"container"}>
         <div className={Style.apidata}>
           <h3 className={Style.heading}>All Api Data Page</h3>
-         <div className={Style.searchBar}>
+         {/* <div className={Style.searchBar}>
           <input type="text" id="searchInput" placeholder="Search by i'd and title"value={searchInput} onChange={handlSearch} />
          <button type="button"   onClick={handleClick}>search</button>
-         </div>
-          {/* <div className={Style.searchBar}>
+         </div> */}
+          <div className={Style.searchBar}>
             <label htmlFor="">Search</label>
             <input type="text" id="searchInput" placeholder="Search here" value={searchInput} onChange={handleSearch}/><span></span>
       
-          </div> */}
+          </div>
           {noData ? (
             <h3 className={Style.noDataPage}>No Data Found.</h3>
           ):(

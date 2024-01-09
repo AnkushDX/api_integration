@@ -1,0 +1,12 @@
+.h3{
+   margin-top: 20px;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+.apexBox{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid red; */
+}
