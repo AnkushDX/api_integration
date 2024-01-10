@@ -1,0 +1,17 @@
+.H3{
+    margin-top: 10px;
+    text-align: center;
+}
+.lineBox{
+    width: 800px;
+    height: 500px;
+    border: 2px solid rgba(0, 136, 255, 0.47);
+    margin-top: 10px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.charbox{
+    width: 1000px;
+    height: 500px;
+}

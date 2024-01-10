@@ -6,6 +6,7 @@ import Tabs from "./Pages/Tabs/Tabs";
 import Charts from "./Pages/Charts/PieChart";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ApexChart from "./Pages/ApexChart/ApexChart";
+import LineChart from "./Pages/LineChart/LineChart";
 function App() {
   return (
     <div className="App">
@@ -15,8 +16,9 @@ function App() {
       < Route path="/" element={<CrossFilterId/>}/>
       < Route path="/imgUpoder" element={<ImageUploder/>}/>
       < Route path="/tabs" element={<Tabs/>}/>
-      < Route path="/charts" element={<Charts/>}/>
-      < Route path="/apex" element={<ApexChart/>}/>
+      < Route path="/pie" element={<Charts/>}/>
+      < Route path="/bar" element={<ApexChart/>}/>
+      < Route path="/line" element={<LineChart/>}/>
       </Routes>
       </BrowserRouter>
 

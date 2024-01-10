@@ -21,13 +21,23 @@ const Nabar = () => {
         <li className="nav-item">
           <Link to='/tabs' className="nav-link" >Tab-Bar</Link>
         </li>
-        <li className="nav-item">
-          <Link to='/charts' className="nav-link" >Charts</Link>
+
+        <div className="dropdown">
+        <div className="collapse navbar-collapse" id="navbarNavDarkDropdown">
+      <ul className="navbar-nav">
+        <li className="nav-item dropdown">
+          <a className="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Charts
+          </a>
+          <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+            <li><Link to="/line" className="dropdown-item" href="#">Line-Chart</Link></li>
+            <li><Link to="/bar" className="dropdown-item" href="#">Bar-Chart</Link></li>
+            <li><Link to="/pie" className="dropdown-item" href="#">Pie-Chart</Link></li>
+          </ul>
         </li>
-        <li className="nav-item">
-          <Link to='/apex' className="nav-link" >ApexCharts</Link>
-        </li>
-      
+      </ul>
+    </div>
+    </div>
       </ul>
     </div>
   </nav>

@@ -1,10 +1,10 @@
 .navbar-brand{
     font-weight: bold;
     font-size: 36px;
-    margin-left: 130px;
+    margin-left: 100px;
 }
 .navbar-nav{
-margin-left: 80px;
+margin-left: 50px;
 font-weight: bold;
 font-size: 20px;
 justify-content: space-between;
@@ -14,4 +14,12 @@ justify-content: space-between;
 }
 .navbar-light .navbar-nav .nav-link {
     color: white;
+}
+.dropdown-menu-dark {
+    color: #020202;
+    background-color: rgb(7, 111, 248);
+  
+}
+.dropdown-menu-dark .dropdown-item {
+    color: #fffdfd;
 }
